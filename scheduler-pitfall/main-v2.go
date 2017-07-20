@@ -8,25 +8,28 @@
 // which does allow for main to complete without Gosched
 
 package main
+
 import "fmt"
 import "time"
 import "runtime"
 
 func main() {
-    var x int
-    threads := runtime.GOMAXPROCS(0)
-    for i := 0; i < threads; i++ {
-	fmt.Println("creating goroutine")
-        go func() {
-	    fmt.Println("Entering for loop")
-            for { runtime.Gosched(); x++ }
-	    fmt.Println("goroutine completed")
-        }()
-    }
-    fmt.Println("Continuing with mainline")
-    runtime.Gosched()
-    fmt.Println("Finished call to scheduler")
-    time.Sleep(time.Second)
-    fmt.Println("x =", x)
+	var x int
+	threads := runtime.GOMAXPROCS(0)
+	for i := 0; i < threads; i++ {
+		fmt.Println("creating goroutine")
+		go func() {
+			fmt.Println("Entering for loop")
+			for {
+				runtime.Gosched()
+				x++
+			}
+			fmt.Println("goroutine completed")
+		}()
+	}
+	fmt.Println("Continuing with mainline")
+	runtime.Gosched()
+	fmt.Println("Finished call to scheduler")
+	time.Sleep(time.Second)
+	fmt.Println("x =", x)
 }
-

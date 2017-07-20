@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"runtime"
 	"sync"
-//	"time"
+	//	"time"
 )
 
 // Parallel example using GOMAXPROCS > 1
@@ -35,4 +35,3 @@ func main() {
 
 	fmt.Println("\nTerminating Program")
 }
-

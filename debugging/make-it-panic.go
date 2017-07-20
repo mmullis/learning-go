@@ -1,6 +1,5 @@
 package main
 
 func main() {
-        panic("MAKE IT PANIC!")
+	panic("MAKE IT PANIC!")
 }
-

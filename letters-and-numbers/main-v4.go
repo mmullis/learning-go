@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"runtime"
 	"sync"
-//	"time"
+	//	"time"
 )
 
 // Use a goroutine for every letter/character
@@ -31,10 +31,9 @@ func main() {
 		}
 	}()
 
-//	runtime.Gosched() 
+	//	runtime.Gosched()
 	fmt.Println("Waiting to finish")
 	wg.Wait()
 
 	fmt.Println("\nTerminating Program")
 }
-

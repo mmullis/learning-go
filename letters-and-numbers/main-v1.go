@@ -32,4 +32,3 @@ func main() {
 
 	fmt.Println("\nTerminating Program")
 }
-

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"runtime"
 	"sync"
-//	"time"
+	//	"time"
 )
 
 // Use a goroutine for every letter/character
@@ -34,4 +34,3 @@ func main() {
 
 	fmt.Println("\nTerminating Program")
 }
-
