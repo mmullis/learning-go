@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"os"
 	"sync"
-	"log"
 )
 
 func main() {
@@ -17,7 +17,7 @@ func main() {
 	go func() {
 		for i := 0; i < 100; i++ {
 			bufferedCh <- i
-			unBufferedCh <- i*1000
+			unBufferedCh <- i * 1000
 		}
 		close(bufferedCh)
 		close(unBufferedCh)
@@ -33,13 +33,13 @@ func main() {
 		}
 	}()
 
-        wg.Add(1)
-        go func() {
-                defer wg.Done()
-                for v := range unBufferedCh {
-                        fmt.Printf("unbufferedCh: %d\n", v)
-                }
-        }()
+	wg.Add(1)
+	go func() {
+		defer wg.Done()
+		for v := range unBufferedCh {
+			fmt.Printf("unbufferedCh: %d\n", v)
+		}
+	}()
 
 	wg.Wait()
 

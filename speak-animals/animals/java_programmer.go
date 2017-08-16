@@ -4,8 +4,5 @@ type JavaProgrammer struct {
 }
 
 func (j JavaProgrammer) Speak() string {
-    return "Design patterns!"
+	return "Design patterns!"
 }
-
-
-

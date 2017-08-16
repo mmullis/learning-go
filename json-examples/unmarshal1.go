@@ -66,4 +66,3 @@ func main() {
 	}
 	fmt.Printf("%v", s)
 }
-

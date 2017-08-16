@@ -1,10 +1,9 @@
 package main
 
 import (
-    "fmt"
+	"fmt"
 )
 
-func main() { 
+func main() {
 	fmt.Println("You're swell\nYou\\'re swell")
 }
-

@@ -1,10 +1,9 @@
 package animals
 
 type Dog struct {
-    Age interface{}
+	Age interface{}
 }
 
 func (d Dog) Speak() string {
-    return "Woof!"
+	return "Woof!"
 }
-

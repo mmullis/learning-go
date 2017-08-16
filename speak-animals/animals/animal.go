@@ -1,6 +1,5 @@
 package animals
 
 type Animal interface {
-    Speak() string
+	Speak() string
 }
-

@@ -27,4 +27,3 @@ func main() {
 	// c is now a []byte containing the encoded JSON
 	fmt.Print(string(c))
 }
-

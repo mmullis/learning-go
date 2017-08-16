@@ -1,11 +1,11 @@
 package main
 
 import (
-    "fmt"
-    "strings"
+	"fmt"
+	"strings"
 )
 
-func main() { 
+func main() {
 	fmt.Println("I like" + "apple pie.")
 	fmt.Println("I like " + "apple pie.")
 	fmt.Println("I like" + " apple pie.")
@@ -14,4 +14,3 @@ func main() {
 	// Use alternative
 	fmt.Println(strings.Repeat("blink ", 4))
 }
-
